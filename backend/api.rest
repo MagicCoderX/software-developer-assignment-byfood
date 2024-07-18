@@ -1,0 +1,41 @@
+@host = localhost:8080
+
+// Create book
+POST http://{{host}}/api/books HTTP/1.1
+content-type: application/json
+
+{
+    "name": "test-book",
+    "description": "random-description",
+    "price": 100.00
+}
+
+###
+
+// Get book By ID
+GET http://{{host}}/api/books/23 HTTP/1.1
+content-type: application/json
+
+###
+
+// Get All books
+GET http://{{host}}/api/books/ HTTP/1.1
+content-type: application/json
+
+###
+
+// Update book
+PUT http://{{host}}/api/books/23 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "updated-book",
+    "description": "random-description-updated",
+    "price": 100.00
+}
+
+###
+
+// Delete book
+DELETE http://{{host}}/api/books/23 HTTP/1.1
+content-type: application/json
